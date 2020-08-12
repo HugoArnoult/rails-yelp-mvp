@@ -1,17 +1,17 @@
 class RestaurantsController < ApplicationController
-  # GET / restaurants
+  # GET /restaurants
   def index
     @restaurants = Restaurant.all
   end
-  # GET / restaurants/:id
+  # GET /restaurants/:id
   def show
     @restaurant = Restaurant.find(params[:id])
   end
-  # GET / restaurants/new
+  # GET /restaurants/new
   def new
     @restaurant = Restaurant.new
   end
-  # POST / restaurants
+  # POST /restaurants
   def create
     @restaurant = Restaurant.new(restaurant_params)
     if @restaurant.save

@@ -5,7 +5,7 @@
       <%= simple_form_for [ @restaurant, @review ] do |f| %>
         <%= f.input :rating, collection: Review::RATING %>
         <%= f.input :content %>
-        <%= f.submit "Submit a review", class: "btn btn-primary" %>
+        <%= f.submit "Submit review", class: "btn btn-primary" %>
       <% end %>
       <%= link_to 'Cancel', restaurant_path(@restaurant), class: "btn btn-danger mt-3" %>
     </div>
